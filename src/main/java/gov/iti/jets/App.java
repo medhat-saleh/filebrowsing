@@ -16,8 +16,8 @@ public class App extends Application {
     private static Scene scene;
     @Override
     public void start(Stage stage) throws IOException {
-
-    Parent root = FXMLLoader.load(getClass().getResource("resources\fileBrowsing.fxml"));
+    FXMLLoader loader  = new FXMLLoader();
+    Parent root = loader.load(getClass().getClassLoader().getResource("fileBrowsing.fxml"));
     scene = new Scene(root);
     stage.setMaximized(false);
     stage.setScene(scene);
